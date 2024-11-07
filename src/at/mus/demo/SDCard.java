@@ -19,21 +19,16 @@ public class SDCard {
         return files;
     }
 
+    public void addFile(File file) {
+        this.files.add(file);
+    }
+
     public long getFreeSpace() {
         long usedSpace = 0;
         for (File file : files) {
             usedSpace += file.getSize();
         }
         return capacity - usedSpace;
-    }
-
-    public void TakePhoto() {
-        File photo = new File("Photo " + files.size(), 300);
-        if (getFreeSpace() >= photo.getSize()) {
-            files.add(photo);
-        } else {
-            throw new IllegalStateException("Not enough space on card! Please empty card before saving new files");
-        }
     }
 
 }
