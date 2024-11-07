@@ -35,4 +35,5 @@ public class SDCard {
             throw new IllegalStateException("Not enough space on card! Please empty card before saving new files");
         }
     }
+
 }
