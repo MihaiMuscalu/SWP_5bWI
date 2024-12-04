@@ -1,4 +1,4 @@
-package at.mus.Algorithmen;
+package at.mus.BasicAlgorithms;
 
 import java.util.Random;
 

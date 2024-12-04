@@ -1,4 +1,4 @@
-package at.mus.Algorithmen;
+package at.mus.BasicAlgorithms;
 
 public class Main {
     public static void main(String[] args) {
