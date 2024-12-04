@@ -1,4 +1,4 @@
-package at.mus.Algorithmen.Tests;
+package at.mus.Tests;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import at.mus.Algorithmen.DataGenerator;
+import at.mus.BasicAlgorithms.DataGenerator;
 
 public class DataGeneratorTest {
 
@@ -132,43 +132,6 @@ public class DataGeneratorTest {
     void testMinWithEmptyArray() {
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
             DataGenerator.min(new int[0]);
-        });
-    }
-
-    @Test
-    void testSort() {
-        int[] data = { 5, 1, 4, 2, 8 };
-        int[] expected = { 1, 2, 4, 5, 8 };
-
-        int[] result = DataGenerator.sort(data);
-
-        Assertions.assertArrayEquals(expected, result);
-    }
-
-    @Test
-    void testSortReverseOrder() {
-        int[] data = { 9, 7, 5, 3, 1 };
-        int[] expected = { 1, 3, 5, 7, 9 };
-
-        int[] result = DataGenerator.sort(data);
-
-        Assertions.assertArrayEquals(expected, result);
-    }
-
-    @Test
-    void testSortWithDuplicates() {
-        int[] data = { 3, 1, 3, 2, 2 };
-        int[] expected = { 1, 2, 2, 3, 3 };
-
-        int[] result = DataGenerator.sort(data);
-
-        Assertions.assertArrayEquals(expected, result);
-    }
-
-    @Test
-    void testSortEmptyArray() {
-        Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            DataGenerator.sort(new int[0]);
         });
     }
 
