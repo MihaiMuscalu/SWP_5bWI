@@ -45,7 +45,7 @@ public class DataGeneratorTest {
 
         // Normalize output to avoid trailing whitespace issues
         String capturedOutput = outputStream.toString().trim().replace("\r\n", "\n");
-        String expectedOutput = "Number: 1\nNumber: 2\nNumber: 3\nNumber: 4";
+        String expectedOutput = "[1, 2, 3, 4]";
 
         Assertions.assertEquals(expectedOutput, capturedOutput);
     }

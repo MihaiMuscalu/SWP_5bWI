@@ -11,7 +11,7 @@ public class SelectionSort implements Sorter {
         int[] arr = data.clone();
 
         for (int i = 0; i < arr.length - 1; i++) {
-            // Find smallest number
+            // Find the index of the minimum element in the remaining array
             int minIndex = i;
             for (int j = i + 1; j < arr.length; j++) {
                 if (arr[j] < arr[minIndex]) {
@@ -19,7 +19,7 @@ public class SelectionSort implements Sorter {
                 }
             }
 
-            // Swap smallest number with first number
+            // Swap the found minimum element with the first element
             if (minIndex != i) {
                 int temp = arr[i];
                 arr[i] = arr[minIndex];
@@ -28,5 +28,10 @@ public class SelectionSort implements Sorter {
         }
 
         return arr;
+    }
+
+    @Override
+    public String getSorterName() {
+        return "SelectionSort";
     }
 }

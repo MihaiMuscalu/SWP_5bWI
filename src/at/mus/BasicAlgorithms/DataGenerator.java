@@ -16,10 +16,14 @@ public class DataGenerator {
     }
 
     public static void printArray(int[] data) {
-        for (int i : data) {
-            System.out.println("Number: " + i);
+        System.out.print("[");
+        for (int i = 0; i < data.length; i++) {
+            System.out.print(data[i]);
+            if (i < data.length - 1) {
+                System.out.print(", ");
+            }
         }
-
+        System.out.println("]");
     }
 
     public static int[] revert(int[] data) {

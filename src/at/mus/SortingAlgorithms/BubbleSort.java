@@ -26,4 +26,9 @@ public class BubbleSort implements Sorter {
 
         return arr;
     }
+
+    @Override
+    public String getSorterName() {
+        return "BubbleSort";
+    }
 }
